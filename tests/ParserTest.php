@@ -67,6 +67,36 @@ class ParserTest extends PHPUnit_Framework_TestCase
         ], $results[1063]);
     }
     
+    public function testFindDistanceByTimestamp1(){
+        $parser = new Parser($this->getJson1());
+        $results = $parser->findDistanceByTimestamp(null);
+        $this->assertEquals(null, $results);
+    }
+    
+    public function testFindDistanceByTimestamp2(){
+        $parser = new Parser($this->getJson1());
+        $results = $parser->findDistanceByTimestamp(0);
+        $this->assertEquals(null, $results);
+    }
+
+    public function testFindDistanceByTimestamp3(){
+        $parser = new Parser($this->getJson1());
+        $results = $parser->findDistanceByTimestamp('bla');
+        $this->assertEquals(null, $results);
+    }
+
+    public function testFindDistanceByTimestamp4(){
+        $parser = new Parser($this->getJson1());
+        $results = $parser->findDistanceByTimestamp(2.930176258087158);
+        $this->assertEquals(6.594367105793855, $results);
+    }
+
+    public function testFindDistanceByTimestamp5(){
+        $parser = new Parser($this->getJson1());
+        $results = $parser->findDistanceByTimestamp(28.92004483938217);
+        $this->assertEquals(59.82022047828458, $results);
+    }
+
     public function getJson1()
     {
         return json_decode('{
