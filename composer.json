@@ -1,0 +1,22 @@
+{
+  "name": "mateuszblaszczyk/runkeeper-path-parser",
+  "description": "It parses .tcx file to JSON",
+  "license": "MIT",
+  "keywords": [
+    "tcx", "json", "parser"
+  ],
+  "authors": [
+    {
+      "name": "Mateusz Blaszczyk"
+    }
+  ],
+  "require": { },
+  "require-dev": {
+    "phpunit/phpunit": "~5"
+  },
+  "autoload": {
+    "psr-4": {
+      "MateuszBlaszczyk\\RunkeeperPathParser\\": "src/"
+    }
+  }
+}
