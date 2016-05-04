@@ -46,7 +46,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
             'latitude' => '50.671494',
             'longitude' => '18.023444',
             'altitude' => '158.29',
-            'distance' => '6.59',
+            'distance' => '0.00659',
             'timestamp' => '3'
         ], $results[1]);
 
@@ -54,7 +54,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
             'latitude' => '50.671412',
             'longitude' => '18.023365',
             'altitude' => '158.38',
-            'distance' => '17.28',
+            'distance' => '0.01728',
             'timestamp' => '10'
         ], $results[2]);
         
@@ -62,7 +62,7 @@ class ParserTest extends PHPUnit_Framework_TestCase
             'latitude' => '50.671595',
             'longitude' => '18.023614',
             'altitude' => '158.00',
-            'distance' => '11702.41',
+            'distance' => '11.70241',
             'timestamp' => '4554'
         ], $results[1063]);
     }

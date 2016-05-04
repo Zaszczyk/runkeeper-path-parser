@@ -25,6 +25,10 @@ class Parser
     public function parse()
     {
         $results = [];
+        
+        if(!isset($this->data['path'])){
+            return [];
+        }
 
         foreach ($this->data['path'] as $row) {
             $item = [

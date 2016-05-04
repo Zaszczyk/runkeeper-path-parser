@@ -14,7 +14,7 @@ class ValueTransformer
 {
     protected $gpsAccuracy = 6;
 
-    protected $distanceAccuracy = 2;
+    protected $distanceAccuracy = 5;
 
     protected $altitudeAccuracy = 2;
 
@@ -43,7 +43,7 @@ class ValueTransformer
 
     public function roundDistance($value)
     {
-        return round($value, $this->distanceAccuracy);
+        return round($value/1000, $this->distanceAccuracy);
     }
 
 }
