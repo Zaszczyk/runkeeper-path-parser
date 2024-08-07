@@ -22,10 +22,10 @@ class ValueTransformer
 
     public function substrGPSCoordinate($value)
     {
-        $dotPos = strpos($value, '.');
+        $dotPos = strpos((string) $value, '.');
 
         if (!$dotPos) {
-            return $value;
+            return (string) $value;
         }
 
         return substr($value, 0, $dotPos + $this->gpsAccuracy + 1);
